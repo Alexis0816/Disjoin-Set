@@ -3,6 +3,7 @@ int main(){
     vector<char> data = {'a','b','c','d','e','f','g','h'};
     //                    0   1   2   3   4   5   6   7
     DisjoinSet<char>* ds = new DisjoinSet<char>(data);
+    cout<<"Conjuntos: "<<ds->sets()<<endl;// 8
     ds->Union(0, 2);//{0,2} 1,3,4,5,6,7
     ds->Union(5, 6);//{0,2} 1,3,4,{5,6},7
     ds->Union(1, 6);//{0,2} {1,5,6}, 3,4,7
